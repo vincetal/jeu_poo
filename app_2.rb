@@ -5,14 +5,14 @@ require_relative 'lib/game'
 require_relative 'lib/player'
 
 #Display the game title
-puts "-"*48 + "\n"+ "|Bienvenue sur 'FORTNITE VERSION CHEATÉE V2.0!  |" + "\n" + "|Le but du jeu est d'être le dernier survivant !|" + "\n" + "-"*48 + "\n"
+puts "-"*53 + "\n"+ "|Bienvenue Let the Battle Begin  V.2.0!  |" + "\n" + "|But du jeu : Survivre        !|" + "\n" + "-"*53 + "\n"
 
 #The user create his persona
-puts "Here comes a new challenger !"
-print "What is your name? > "
+puts "Bonjour jeune guerrier !"
+print "Quel est ton nom ? > "
 name = gets.chomp
 human_player1 = HumanPlayer.new(name)
-puts "Bienvenue à FORTNITE Cheaté #{human_player1.name}\n"
+puts "Bienvenue dans la battle #{human_player1.name}\n"
 
 #Create player1 enemies .... This is SPARTAAAAA!
 enemies = [Player.new("Josiane"), Player.new("José")]
@@ -29,8 +29,10 @@ while human_player1.life_points > 0 && (enemies[0].life_points > 0 || enemies[1]
 
   #Options for the player to do
   puts "Quelle action veux-tu effectuer ?\n"
+  puts "______________________________________"
   puts "a - chercher une meilleure arme"
   puts "s - chercher à se soigner \n"
+  puts "_______________________________________"
   puts "Attaquer un joueur en vue :"
   enemies.each_with_index {|enemy, index| puts "#{index} - "+ enemy.show_state_v2 } #Show all the enemies there
 
@@ -38,7 +40,7 @@ while human_player1.life_points > 0 && (enemies[0].life_points > 0 || enemies[1]
   print "choix > "
   choice = gets.chomp
   while (!['a','s'].include?(choice.downcase) && (choice != '0' && choice.to_i >= enemies.length))
-    print "Action non reconnue. Essaie encore >"
+    print "Pas comrpris. S.V.P. Essaez encore >"
     choice = gets.chomp
   end
 
