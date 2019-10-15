@@ -1,14 +1,4 @@
-#require 'rubygems'
-#-------Pour le scrapping-------
-#require 'nokogiri'
-#require 'open-uri'
-#-------Pour simuler un navigateur-------
-#require 'watir'
-#require 'launchy'
-#-------Pour les tests------
-#require 'pry'
-
-#Computer player
+# Class du Computer player
 class Player
 
   attr_accessor :name, :life_points
@@ -60,7 +50,9 @@ class Player
 =end
 end
 
-#Human player
+###############################################
+# Class du Human player inherit from Player
+###############################################
 class HumanPlayer < Player
 
   attr_accessor :weapon_level
